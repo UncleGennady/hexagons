@@ -1,0 +1,7 @@
+body {
+    @extend %font;
+    background-color: #505050;
+    @include flex (center);
+    align-items: center;
+    min-height: 100vh;
+}

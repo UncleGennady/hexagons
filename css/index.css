@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active,
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+.container span, .container, body {
+  display: flex;
+}
+
+body {
+  background-color: #505050;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  transform-style: preserve-3d;
+  transform: rotateY(30deg) rotateX(10deg);
+  gap: 10px;
+}
+.container:hover .text {
+  transform: rotateX(-360deg);
+}
+.container:hover .spin {
+  transform: rotateX(660deg);
+}
+.container .text {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transition: 2.5s ease-in-out;
+  transition-delay: calc(0.25s * var(--element));
+}
+.container .spin:before {
+  background: #0000008a;
+}
+.container .spin:after {
+  background: #0000008a;
+}
+.container .spin span {
+  border: 1.5px solid #3f3f3f;
+  background: #0000008a;
+  color: #d31a1a9c;
+}
+.container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  color: #1f1f1f;
+  background: linear-gradient(#f22525, grey);
+  transform-style: preserve-3d;
+  transform: rotateX(calc(60deg * var(--item))) translateZ(86.5px);
+}
+.container span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #272727;
+  transform-origin: left;
+  transform: rotateY(90deg);
+}
+.container span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: grey;
+  transform-origin: left;
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+/*# sourceMappingURL=index.css.map */

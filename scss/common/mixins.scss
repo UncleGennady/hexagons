@@ -1,0 +1,4 @@
+@mixin flex ($flex-value) {
+    @extend %d-flex;
+    justify-content: $flex-value;
+}
